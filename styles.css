@@ -1,0 +1,67 @@
+/* Estilo general */
+body {
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e2f; /* Fondo azul oscuro */
+    overflow: hidden;
+}
+
+/* Contenedor del editor */
+#editor {
+    display: flex;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 90%;
+    max-width: 600px;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+/* Números de línea */
+#line-numbers {
+    background-color: #252526; /* Fondo para los números */
+    color: #858585; /* Color de los números */
+    text-align: right;
+    padding-right: 10px;
+    user-select: none;
+    line-height: 1.5; /* Igual al código */
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    padding: 5px 10px 0 10px; /* Ajuste fino de posición */
+}
+
+/* Texto con formato de código */
+#code {
+    flex: 1;
+    color: #f72585; /* Letras rosa */
+    font-size: 1rem;
+    white-space: pre-wrap; /* Permite saltos de línea */
+    word-wrap: break-word;
+    padding-left: 10px;
+    line-height: 1.5; /* Debe coincidir con #line-numbers */
+    margin: 0;
+    padding-top: 5px; /* Ajuste fino */
+    overflow-x: auto;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    #editor {
+        padding: 15px;
+    }
+    #code {
+        font-size: 0.9rem;
+    }
+    #line-numbers {
+        font-size: 0.9rem;
+    }
+}
